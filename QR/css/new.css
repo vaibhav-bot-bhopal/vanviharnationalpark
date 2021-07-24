@@ -1,0 +1,56 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.content-main-box{
+	width:99%;
+	height: auto;
+	margin: auto;
+	max-width: 1200px;
+	overflow: hidden;
+	position: fixed;
+}
+#videobox{
+	width: 60%;
+	height: auto;
+	margin: auto;
+	border: 2px solid #000;
+	transition: 0.5s;
+	
+}
+
+video{
+	width: 100%;
+	vertical-align: bottom;
+}
+
+a{
+	color:#000;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: verdana;
+}
+
+
+.content-box{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	display: block;
+	position: static;
+	overflow: hidden;
+}
+#videobox.in{
+	animation: ac 1s;
+}
+
+#videobox.out{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 150px;
+	z-index: 999;
+	animation: an 0.5s;
+}

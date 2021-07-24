@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Van Vihar</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <!-- Plugin css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/lightcase.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.nstSlider.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css" media="all" />
+
+    <!-- own style css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/rtl.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+
+</head>
+
+<body>
+    <!-- Start Pre-Loader-->
+
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div id="loaderImage"></div>
+<script type="text/javascript">
+	var cSpeed=6;
+	var cWidth=100;
+	var cHeight=72;
+	var cTotalFrames=18;
+	var cFrameWidth=100;
+	var cImageSrc='images/sprites.gif';
+	
+	var cImageTimeout=false;
+	var cIndex=0;
+	var cXpos=0;
+	var cPreloaderTimeout=false;
+	var SECONDS_BETWEEN_FRAMES=0;
+	
+	function startAnimation(){
+		
+		document.getElementById('loaderImage').style.backgroundImage='url('+cImageSrc+')';
+		document.getElementById('loaderImage').style.width=cWidth+'px';
+		document.getElementById('loaderImage').style.height=cHeight+'px';
+		
+		//FPS = Math.round(100/(maxSpeed+2-speed));
+		FPS = Math.round(100/cSpeed);
+		SECONDS_BETWEEN_FRAMES = 1 / FPS;
+		
+		cPreloaderTimeout=setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES/1000);
+		
+	}
+	
+	function continueAnimation(){
+		
+		cXpos += cFrameWidth;
+		//increase the index so we know which frame of our animation we are currently on
+		cIndex += 1;
+		 
+		//if our cIndex is higher than our total number of frames, we're at the end and should restart
+		if (cIndex >= cTotalFrames) {
+			cXpos =0;
+			cIndex=0;
+		}
+		
+		if(document.getElementById('loaderImage'))
+			document.getElementById('loaderImage').style.backgroundPosition=(-cXpos)+'px 0';
+		
+		cPreloaderTimeout=setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES*1000);
+	}
+	
+	function stopAnimation(){//stops animation
+		clearTimeout(cPreloaderTimeout);
+		cPreloaderTimeout=false;
+	}
+	
+	function imageLoader(s, fun)//Pre-loads the sprites image
+	{
+		clearTimeout(cImageTimeout);
+		cImageTimeout=0;
+		genImage = new Image();
+		genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
+		genImage.onerror=new Function('alert(\'Could not load the image\')');
+		genImage.src=s;
+	}
+	
+	//The following code starts the animation
+	new imageLoader(cImageSrc, 'startAnimation()');
+</script>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box-layout">
+
+        <!-- End Pre-Loader -->
+
+        <header class="header-style-2"> 
+            <div class="bg-header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-top">
+                                <ul class="h-contact">
+                                    <li><i class="flaticon-vibrating-phone"></i> Phone : 0755 - 2674278</li>
+                                    <li><i class="flaticon-message"></i> Email : fdvanvnp.bpl@mp.gov.in</li>
+                                </ul>
+                            
+                            <div class="donate-option">
+                            	<a href="https://forest.mponline.gov.in/" target="_blank">Entry Ticket Booking</a>
+                                <a href="QR/faqs/Night-Safari-Guidelines.pdf" target="_blank" class="btn-info">Night Safari Rules</a>
+                            </div>
+                            <!-- .donate-option -->
+                        </div>
+                        <!-- .header-top -->
+                    </div>
+                    <!-- .header-top -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .bg-header-top -->
+
+
+            <div class="social-icons">
+                <a href="http://www.facebook.com/VanViharNationalParkOfficialPage" target="_blank" class="facebook"><i class="fa fa-facebook"></i>Facebook</a>
+                <a href="https://twitter.com/van_vihar?s=08" target="_blank" class="twitter"><i class="fa fa-twitter"></i>Twitter</a>
+                <!-- <a href="https://youtube.com" target="_blank" class="youtube"><i class="fa fa-youtube"></i>Youtube</a> -->
+            </div>
+
+            <!-- Start Menu -->
+            <div class="bg-main-menu menu-scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-menu" >
+                            <a class="show-res-logo" href="index.html"><img src="assets/images/home01/logo.png" alt="logo" class="img-responsive" /></a>
+                            <nav class="navbar" >
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+                                    <a class="navbar-brand" href="index.html"><img src="assets/images/home01/logo.png" alt="logo" class="img-responsive" /></a>
+                                </div>
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a href="index.html" class="dropdown-toggle active" >HOME </a>
+                                            
+                                        </li>
+                                        
+
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About
+ <span class="caret"></span></a>
+                                            <ul class="dropdown-menu sub-menu">
+                                         
+<li><a href="Inroduction.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Introduction
+</a></li>
+<li><a href="Vision_mission.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vision & Mission
+</a></li>
+<li><a href="History_vanvihar.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> History 
+</a></li>
+
+ <li><a href="Significance.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Significance
+</a></li>
+<li><a href="Forest_vegetation.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Forest and Vegetation
+</a></li>
+                                         
+<li><a href="Biodiversity.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Biodiversity
+</a></li>
+                                            </ul>
+                                        </li>
+
+<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tourist Information
+ <span class="caret"></span></a>
+    <ul class="dropdown-menu sub-menu">
+   <li><a href="Attractions.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Attractions of The Zoo
+</a></li>
+<li><a href="Bird_interpretation_center.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Bird Interpretation Center
+</a></li>
+   <li><a href="Timings_holidays.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Timings and Holidays
+</a></li>
+   <li><a href="Excursions_charges.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Gate Charges
+</a></li>
+   
+   <li><a href="Display_map.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Display Map
+</a></li>
+   <li><a href="Do_donts.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Do(s) and Don't(s)
+</a></li>
+   <li><a href="Events.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Interactive Events
+</a></li>
+<li><a href="Animal_adoption.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Animal Adoption
+</a></li>
+                                            </ul>
+                                        </li>
+                                       
+   <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Management
+ <span class="caret"></span></a>
+     <ul class="dropdown-menu sub-menu">
+        <li><a href="Administrative.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Administrative Body
+</a></li>
+      
+       <li><a href="Animal_management.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Animal Management
+</a></li>
+       <li><a href="Other_activities.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Other Activities
+</a></li>
+       <li><a href="Rescue_breeding_center.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Rescue & Breeding Center
+</a></li>
+       
+        
+        
+        </ul>
+                                        </li>
+                                       
+                                        <li class="dropdown">
+                                            <a href="Gallery.html" >Gallery </a>
+                                            
+                                        </li>
+                                        <li><a href="Contact.html">Contact Us</a></li>
+                                        <li><a href="QR/faqs/FAQs.pdf">FAQ<span style="text-transform: lowercase;">s</span></a></li>
+                                    </ul>
+                                  
+                                                <!-- .cart-items -->
+
+                                               
+                                        <!-- .cart-option -->
+
+                                       
+                                    </div>
+                                    <!-- .header-search-box -->
+                                </div>
+                                <!-- .navbar-collapse -->
+                            </nav>  
+                        </div>
+                        <!-- .main-menu -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .bg-main-menu  -->
+        </header>
+
+        <!-- Start Slider Section -->
+
+
+        <section class="bg-slider-option">
+            <div class="slider-option slider-two">
+                <div id="slider" class="carousel slide wow fadeInDown" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider" data-slide-to="1"></li>
+                        <li data-target="#slider" data-slide-to="2"></li>
+						<li data-target="#slider" data-slide-to="3"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="slider-item">
+                                <img src="assets/images/home02/slider-img-1.jpg" alt="bg-slider-2">
+                                <div class="slider-content-area">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6"></div>
+                                            <!-- .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="slider-content">
+                                                    <h3>welcome to</h3>
+                                                    <h2>&nbsp;Van Vihar</h2>
+                                                    <p>&nbsp;&nbsp;&nbsp;National Park and Zoo</p>
+                                                    <div class="slider-btn">
+                                                        <!-- <a href="#" class="btn btn-default">join now</a>
+                                                        <a href="Animal_adoption.html" class="btn btn-default">donate now</a> -->
+                                                    </div>
+                                                    <!-- .slider-btn -->
+                                                </div>
+                                                <!-- .carousel-caption -->
+                                            </div>
+                                            <!-- .col-md-6 -->
+                                        </div>
+                                        <!-- .row -->
+                                    </div>
+                                    <!-- .container -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .items -->
+
+                        <div class="item">
+                            <div class="slider-item">
+                                <img src="assets/images/home02/slider-img-2.jpg" alt="bg-slider-2">
+                                <div class="slider-content-area">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6"></div>
+                                            <!-- .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="slider-content">
+                                                    <h3>welcome to</h3>
+                                                    <h2>&nbsp;Van Vihar</h2>
+                                                    <p>&nbsp;&nbsp;&nbsp;National Park and Zoo</p>
+                                                    <div class="slider-btn">
+                                                      <!--  <a href="#" class="btn btn-default">join now</a>
+                                                        <a href="Animal_adoption.html" class="btn btn-default">donate now</a> -->
+                                                    </div>
+                                                    <!-- .slider-btn -->
+                                                </div>
+                                                <!-- .carousel-caption -->
+                                            </div>
+                                            <!-- .col-md-6 -->
+                                        </div>
+                                        <!-- .row -->
+                                    </div>
+                                    <!-- .container -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .items -->
+						
+						<div class="item">
+                            <div class="slider-item">
+                                <img src="assets/images/home02/slider-img-3.jpg" alt="bg-slider-2">
+                                <div class="slider-content-area">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6"></div>
+                                            <!-- .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="slider-content">
+                                                    <h3>welcome to</h3>
+                                                    <h2>&nbsp;Van Vihar</h2>
+                                                    <p>&nbsp;&nbsp;&nbsp;National Park and Zoo</p>
+                                                    <div class="slider-btn">
+                                                      <!--  <a href="#" class="btn btn-default">join now</a>
+                                                        <a href="Animal_adoption.html" class="btn btn-default">donate now</a> -->
+                                                    </div>
+                                                    <!-- .slider-btn -->
+                                                </div>
+                                                <!-- .carousel-caption -->
+                                            </div>
+                                            <!-- .col-md-6 -->
+                                        </div>
+                                        <!-- .row -->
+                                    </div>
+                                    <!-- .container -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="slider-item">
+                                <img src="assets/images/home02/slider-img-4.jpg" alt="bg-slider-2">
+                                <div class="slider-content-area">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6"></div>
+                                            <!-- .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="slider-content">
+                                                    <<h3>welcome to</h3>
+                                                    <h2>&nbsp;Van Vihar</h2>
+                                                    <p>&nbsp;&nbsp;&nbsp;National Park and Zoo</p>
+                                                   <!-- <div class="slider-btn">
+                                                        <a href="#" class="btn btn-default">join now</a>
+                                                        <a href="Animal_adoption.html" class="btn btn-default">donate now</a>
+                                                    </div> -->
+                                                    <!-- .slider-btn -->
+                                                </div>
+                                                <!-- .carousel-caption -->
+                                            </div>
+                                            <!-- .col-md-6 -->
+                                        </div>
+                                        <!-- .row -->
+                                    </div>
+                                    <!-- .container -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .items -->
+						
+						
+                    </div>
+                    <!-- .carosoul-inner -->
+                    <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- .slider-option -->
+        </section>
+
+        <!-- End Slider Section -->
+
+
+        <!-- Start About Greenforest Section -->
+      <section class="bg-about-greenforest">
+            <div class="container">
+                <div class="row">
+                    <div class="about-greenforest">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="about-greenforest-content" >
+                                    <h2>Van Vihar National Park & ZOO</h2>
+                                    <p><span>Van Vihar National Park and Zoo is one of the most revered National Park and Zoo of Central India and is a shining beacon in the field of conservation. It is an amazing world of winged creatures, free ranging ungulates and captive carnivores in the midst of greenery.</span></p>
+                                    <p>The park which is more popularly known as just “Van Vihar” is considered as a “must see” destination for tourists visiting Bhopal. The characteristic combination of rich wetland areas, meadows, pools of water at different places, rugged slopes, mixed bamboo vegetation along with grass covered plateau and areas of mixed plantations support the rich floral and faunal diversity in the area.</p><br/><p> This green oasis amidst the city of lakes also plays a very vital role as a carbon sink contributing to environmental health of Bhopal. It is situated right next to the famous Upper Lake of Bhopal also known as the “Bada Talab” which is a Ramsar Site and one of the two lakes of Bhoj Wetland.</p>
+                                 </div>
+                                <!-- .about-greenforest-content -->
+                            </div>
+                            <!-- .col-md-8 -->
+                            <div class="col-md-4">
+                                <div class="about-greenforest-img"  >
+                                    <img src="assets/images/home02/about-greenforet-img.jpg" alt="about-greenforet-img" class="img-responsive" />
+                                </div>
+                                <!-- .about-greenforest-img -->
+                            </div>
+                            <!-- .col-md-4 -->
+                        </div>
+                    </div>
+                    <!-- .about-greenforest -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </section>
+
+
+
+
+        <!-- End About Greenforest Section -->
+
+
+
+        <!-- Start Recent Project Section -->
+
+
+        <section class="bg-recent-project">
+            <div class="container">
+                <div class="row">
+                    <div class="recent-project">
+                        <div class="section-header">
+                            <h2>Uniqueness of Van Vihar</h2>
+                            <p>One of it’s kind establishment being a combination of National Park, a Zoo, Rescue Centre for wild animals and Conservation Breeding Centre for selected vital species</p>
+                        </div>
+                        <!-- .section-header -->
+
+                        <div id="filters" class="button-group ">
+                            <button class="button is-checked" data-filter="*">All in one</button>
+                            <button class="button" data-filter=".cat-1">National Park</button>
+                            <button class="button" data-filter=".cat-2">Zoological Garden</button>
+                            <button class="button" data-filter=".cat-3">Rescue Centre</button>
+                            <button class="button" data-filter=".cat-4">Conservation Breeding Centre</button>
+                        </div>
+                        <div class="portfolio-items">
+                            <div class="item cat-1" data-category="transition">
+                                <div class="item-inner">
+                                    <div class="portfolio-img">
+                                        <div class="overlay-project"></div>
+                                        <!-- .overlay-project -->
+                                        
+										<img src="assets/images/home02/recent-project-img-1.jpg" alt="recent-project-img-1">
+										
+                                        <ul class="project-link-option">
+                                            <li class="project-link"><a href="Gallery.html"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- /.portfolio-img -->
+                                    <div class="recent-project-content">
+                                        <h4><a href="Gallery.html">Tiger</a></h4>
+                                        <p><span><a href="Gallery.html">National Park</a></span></p>
+                                        <!-- <p>By : <span><a href="#">Photograp</a></span></p> -->
+                                    </div>
+                                    <!-- .latest-port-content -->
+                                </div>
+                                <!-- .item-inner -->
+                            </div>
+                            <!-- .items -->
+
+                            <div class="item cat-2 " data-category="metalloid">
+                                <div class="item-inner">
+                                    <div class="portfolio-img">
+                                        <div class="overlay-project"></div>
+                                        <!-- .overlay-project -->
+                                        <img src="assets/images/home02/recent-project-img-2.jpg" alt="recent-project-img-2">
+                                        <ul class="project-link-option">
+                                            <li class="project-link"><a href="Gallery.html"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                    <!-- /.portfolio-img -->
+                                    <div class="recent-project-content">
+                                        <h4><a href="Gallery.html">Leopard </a></h4>
+                                        <p><span><a href="Gallery.html">Zoological Garden</a></span></p>
+                                    </div>
+                                    <!-- .latest-port-content -->
+                                </div>
+                                <!-- .item-inner -->
+                            </div>
+                            <!-- .items -->
+
+                            <div class="item cat-3 " data-category="post-transition">
+                                <div class="item-inner">
+                                    <div class="portfolio-img">
+                                        <div class="overlay-project"></div>
+                                        <!-- .overlay-project -->
+                                        <img src="assets/images/home02/recent-project-img-3.jpg" alt="recent-project-img-3">
+                                        <ul class="project-link-option">
+                                            <li class="project-link"><a href="Gallery.html"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- /.portfolio-img -->
+                                    <div class="recent-project-content">
+                                        <h4><a href="Gallery.html">Sloth Bear</a></h4>
+                                        <p><span><a href="Gallery.html">Rescue Centre</a></span></p>
+                                    </div>
+                                    <!-- .latest-port-content -->
+                                </div>
+                                <!-- .item-inner -->
+                            </div>
+                            <!-- .items -->
+
+                            <div class="item cat-2" data-category="post-transition">
+                                <div class="item-inner">
+                                    <div class="portfolio-img">
+                                        <div class="overlay-project"></div>
+                                        <!-- .overlay-project -->
+                                        <img src="assets/images/home02/recent-project-img-4.jpg" alt="recent-project-img-4">
+                                        <ul class="project-link-option">
+                                            <li class="project-link"><a href="Gallery.html"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                    <!-- /.portfolio-img -->
+                                    <div class="recent-project-content">
+                                        <h4><a href="Gallery.html">Hyena </a></h4>
+                                        <p><span><a href="Gallery.html">Zoological Garden</a></span></p>
+                                    </div>
+                                    <!-- .latest-port-content -->
+                                </div>
+                                <!-- .item-inner -->
+                            </div>
+                            <!-- .items -->
+                            <div class="item cat-4" data-category="transition">
+                                <div class="item-inner">
+                                    <div class="portfolio-img">
+                                        <div class="overlay-project"></div>
+                                        <!-- .overlay-project -->
+                                        <img src="assets/images/home02/recent-project-img-5.jpg" alt="recent-project-img-5">
+                                        <ul class="project-link-option">
+                                            <li class="project-link"><a href="Gallery.html"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- /.portfolio-img -->
+                                    <div class="recent-project-content">
+                                        <h4><a href="Gallery.html">Vulture Breeding</a></h4>
+                                        <p><span><a href="Gallery.html">Conservation Breeding Centre</a></span></p>
+                                    </div>
+                                    <!-- .latest-port-content -->
+                                </div>
+                                <!-- .item-inner -->
+                            </div>
+                            <!-- .items -->
+                            <div class="item cat-1" data-category="alkali">
+                                <div class="item-inner">
+                                    <div class="portfolio-img">
+                                        <div class="overlay-project"></div>
+                                        <!-- .overlay-project -->
+                                        <img src="assets/images/home02/recent-project-img-6.jpg" alt="recent-project-img-6">
+                                        <ul class="project-link-option">
+                                            <li class="project-link"><a href="Gallery.html"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- /.portfolio-img -->
+                                    <div class="recent-project-content">
+                                        <h4><a href="Gallery.html">Spotted Deer : Cheetal</a></h4>
+                                        <p><span><a href="Gallery.html">National Park</a></span></p>
+                                    </div>
+                                    <!-- .latest-port-content -->
+                                </div>
+                                <!-- .item-inner -->
+                            </div>
+                            <!-- .items -->
+                        </div>
+                        <!-- .isotope-items -->
+                    </div>
+                    <!-- .recent-project -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </section>
+
+
+        <!-- End Recent Project Section -->
+
+
+        <!-- Start Count Section -->
+
+        <section class="bg-count2-section">
+            <div class="count-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="count-option">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="count-items">
+                                        <i class="flaticon-internet"></i>
+                                        <span class="counter">25</span><span>+</span>
+                                        <h4>YEARS OF CONSERVATION WORK</h4>
+                                    </div>
+                                    <!-- .count-items -->
+                                </div>
+                                <!-- .col-md-3 -->
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="count-items">
+                                        <i class="flaticon-man"></i>
+                                        <span class="counter">1000</span><span>+</span>
+                                        <h4>Free Ranging Animals</h4>
+                                    </div>
+                                    <!-- .count-items -->
+                                </div>
+                                <!-- .col-md-3 -->
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="count-items">
+                                        <i class="flaticon-rocket-launch"></i>
+                                        <span class="counter">25</span><span>+</span>
+                                        <h4>Awareness Events Each Year</h4>
+                                    </div>
+                                    <!-- .count-items -->
+                                </div>
+                                <!-- .col-md-3 -->
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="count-items">
+                                        <i class="flaticon-people"></i>
+                                        <span class="counter">10</span><span>&nbsp;Lakh</span><span>+</span>
+                                        <h4>Tourists in last 3 years</h4>
+                                    </div>
+                                    <!-- .count-items -->
+                                </div>
+                                <!-- .col-md-3 -->
+                            </div>
+                            <!-- .row -->
+                        </div>
+                        <!-- .count-section -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+        </section>
+
+        <!-- End Count Section -->
+
+
+
+
+
+
+        <!-- Start Focus Cause Section -->
+
+        <section class="bg-focus-cause-section2">
+            <div class="container">
+                <div class="row">
+                    <div class="focus-cause">
+                        <div class="section-header">
+                            <h2>Animal Adoption Scheme</h2>
+                            <p>An Adoption scheme with the objective of creating awareness and affection towards wildlife and further the cause of of wildlife conservation. Any individual or organization can adopt one or more animals as per the scheme. More details can be found on Animal Adoption page. </p>
+                        </div>
+                        <!-- .section-header -->
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="cause-items">
+                                    <img src="assets/images/home02/cause-img-1.jpg" alt="cause-img-1" class="img-responsive" />
+                                    <div class="cause-content">
+                                        <div class="price-title">
+                                            <div class="price-left">
+                                                <h5>Half Yearly:<span class="rupee_font">Rs.1 Lakh</span></h5>
+                                            </div>
+                                            <!-- .price-left -->
+                                            <div class="price-right">
+                                                <h5>Yearly:<span class="rupee_font">Rs.2 Lakh</span></h5>
+                                            </div>
+                                            <!-- .price-left -->
+                                        </div>
+                                        <!-- .price-title -->
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                            </div>
+                                            <!-- .progress-bar -->
+                                        </div>
+                                        <!-- .progress -->
+                                        <h4><a href="Animal_adoption.html">Tiger</a></h4>
+                                        <p>Adopt our National Animal and contribute for conservation. Quarterly and monthly adoption option also present.</p>
+                                        <a href="Animal_adoption.html" class="btn btn-default">Know More</a>
+                                    </div>
+                                    <!-- .cause-content -->
+                                </div>
+                                <!-- .cause-items -->
+                            </div>
+                            <!-- .col-md-4 -->
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="cause-items">
+                                    <img src="assets/images/home02/cause-img-2.jpg" alt="cause-img-2" class="img-responsive" />
+                                    <div class="cause-content">
+                                         <div class="price-title">
+                                            <div class="price-left">
+                                                <h5>Half Yearly:<span class="rupee_font">Rs.50 K</span></h5>
+                                            </div>
+                                            <!-- .price-left -->
+                                            <div class="price-right">
+                                                <h5>Yearly:<span class="rupee_font">Rs.1 Lakh</span></h5>
+                                            </div>
+                                            <!-- .price-left -->
+                                        </div>
+                                        <!-- .price-title -->
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                            </div>
+                                            <!-- .progress-bar -->
+                                        </div>
+                                        <!-- .progress -->
+                                        <h4><a href="Animal_adoption.html">Leopard</a></h4>
+                                        <p>Adopt this revered cat and contribute for conservation. Quarterly and monthly adoption option also present.</p>
+                                        <a href="Animal_adoption.html" class="btn btn-default">Know More</a>
+                                    </div>
+                                    <!-- .cause-content -->
+                                </div>
+                                <!-- .cause-items -->
+                            </div>
+                            <!-- .col-md-4 -->
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <div class="cause-items">
+                                    <img src="assets/images/home02/cause-img-3.jpg" alt="cause-img-3" class="img-responsive" />
+                                    <div class="cause-content">
+                                        <div class="price-title">
+                                            <div class="price-left">
+                                                <h5>Half Yearly:<span class="rupee_font">Rs.19 K</span></h5>
+                                            </div>
+                                            <!-- .price-left -->
+                                            <div class="price-right">
+                                                <h5>Yearly:<span class="rupee_font">Rs.36 K</span></h5>
+                                            </div>
+                                            <!-- .price-left -->
+                                        </div>
+                                        <!-- .price-title -->
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                            </div>
+                                            <!-- .progress-bar -->
+                                        </div>
+                                        <!-- .progress -->
+                                       <h4><a href="Animal_adoption.html">Crocodile</a></h4>
+                                        <p>Adopt this king of water and contribute for conservation. Quarterly and monthly adoption option also present.</p>
+                                        <a href="Animal_adoption.html" class="btn btn-default">Know More</a>
+                                    </div>
+                                    <!-- .cause-content -->
+                                </div>
+                                <!-- .cause-items -->
+                            </div>
+                            <!-- .col-md-4 -->
+                        </div>
+                        <!-- .row -->
+                    </div>
+                    <!-- .focus-cause -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </section>
+
+        <!-- End Focus Cause Section -->
+
+
+
+
+        <!-- Start Footer Section -->
+        <footer>
+            <div class="bg-footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-top">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-widgets">
+                                        <div class="widgets-title">
+                                            <h3>About us</h3>
+                                        </div>
+                                        <!-- .widgets-title -->
+                                        <div class="widgets-content">
+                                            <p>Van Vihar is a revered National Park and Zoo located at Bhopal, the city of lakes and the capital of Madhya Pradesh. It is known for its beautiful landscape comprising of the upper lake, serene forest cover with rich floral and faunal diversity.</p>
+                                        </div>
+                                        <!-- .widgets-content -->
+                                       
+                                        <!-- .address -->
+                                    </div>
+                                    <!-- .footer-widgets -->
+                                </div>
+                                <!-- .col-md-3 -->
+                                <!-- Start of CuterCounter Code -->
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-widgets">
+                                        <div class="widgets-title">
+                                            <h3>Useful Links</h3>
+                                        </div>
+                                        <!-- .widgets-title -->
+                                        <ul class="latest-news">
+                                            <li>
+                                                <span class="thumbnail-img">
+												<img src="assets/images/home01/small-bog-img-1.jpg" alt="small-bog-img-1" class="img-responsive" />
+											</span>
+                                                <div class="thumbnail-content">
+                                                    <h5><a href="https://www.mpforest.gov.in/" target="_blank">Madhya Pradesh Forest Department</a></h5>
+                                                    
+                                                </div>
+                                                <!-- .thumbnail-content -->
+                                            </li>
+                                            <li>
+                                                <span class="thumbnail-img">
+												<img src="assets/images/home01/small-bog-img-3.jpg" alt="small-bog-img-2" class="img-responsive" />
+											</span>
+                                                <div class="thumbnail-content">
+                                                    <h5><a href="https://projecttiger.nic.in/" target="_blank">National Tiger Conservation Authority</a></h5>
+                                                    
+                                                </div>
+                                                <!-- .thumbnail-content -->
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- .footer-widgets -->
+                                </div>
+                                <!-- .col-md-3 -->
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-widgets">
+                                        <div class="widgets-title">
+                                            <h3 style="color:#000">--------</h3>
+                                        </div>
+                                        <!-- .widgets-title -->
+                                        <ul class="latest-news">
+                                            <li>
+                                                <span class="thumbnail-img">
+												<img src="assets/images/home01/small-bog-img-2.jpg" alt="small-bog-img-1" class="img-responsive" />
+											</span>
+                                                <div class="thumbnail-content">
+                                                   <h5><a href="http://www.mptigerfoundation.org/" target="_blank">Madhya Pradesh Tiger Foundation</a></h5>
+                                                   
+                                                </div>
+                                                <!-- .thumbnail-content -->
+                                            </li>
+                                            <li>
+                                                <span class="thumbnail-img">
+												<img src="assets/images/home01/small-bog-img-4.jpg" alt="small-bog-img-2" class="img-responsive" />
+											</span>
+                                                <div class="thumbnail-content">
+                                                    <h5><a href="http://cza.nic.in/" target="_blank">Central Zoo Authority </a></h5>
+                                                   
+                                                </div>
+                                                <!-- .thumbnail-content -->
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+                                    <!-- .footer-widgets -->
+                                </div>
+                                <!-- .col-md-3 -->
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-widgets">
+                                        <div class="widgets-title">
+                                            <h3>Contact Us</h3>
+                                        </div>
+                                        <!-- .widgets-title -->
+                                         <div class="address-box">
+                                            <ul class="address">
+                                                <li>
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                    <span>VanVihar National Park</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                                    <span>0755 - 2674278</span>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                                    <span>fdvanvnp.bpl@mp.gov.in</span>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- .footer-instagram -->
+                                       <div>  
+                                       </div>
+                                    </div>
+                                    <!-- .footer-widgets -->
+                                </div>
+                                <!-- .col-md-3 -->
+                            </div>
+                            <!-- .row -->
+                        </div>
+                        <!-- .footer-top -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .bg-footer-top -->
+
+            <div class="bg-footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-bottom">
+                            <div class="copyright-txt">
+                                <p>&copy;Van Vihar National Park & Zoo, 2019. All Rights Reserved.</p>
+                            </div>
+							<div class="copyright-txt" style="float:right">
+							<p> Developed By <a href="https://blueoceantech.in/" title="Blue Ocean Tech Solutions" target="_blank">Blue Ocean Tech Solutions Pvt. Ltd.</a></p>
+							 </div>
+                            <!-- .copyright-txt -->
+                            <div class="social-box">
+                                <ul class="social-icon-rounded">
+                                    <!--<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>-->
+                                </ul>
+                            </div>
+                            <!-- .social-box -->
+
+                        </div>
+                        <!-- .footer-bottom -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .bg-footer-bottom -->
+
+        </footer>
+
+        <!-- End Footer Section -->
+
+
+        <!-- Start Scrolling -->
+
+        <div class="scroll-img"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+
+        <!-- End Scrolling -->
+
+
+    </div>
+
+
+    <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="assets/js/lightcase.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.nstSlider.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="assets/js/custom.map.js"></script>
+    <script type="text/javascript" src="assets/js/plugins.isotope.js"></script>
+    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/js/custom.isotope.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/new.css">
+</head>
+
+<body>
+<div class="content-main-box">
+<center>
+<img src="images/logo.png">
+</center>
+	<div id="videobox">
+	<table border=0>
+	<tr><th colspan=2>
+		<video width="200" controls="">
+			<source src="videos/herbivore1.mp4" type="video/mp4">
+		</video>
+		</th></tr>
+		<tr style="background: #ccffff;"><th width=50%><a href="nilgaiHI.html">Hindi</a></th>
+		<th>
+		<audio controls id="linkAudio">
+			<source src="#" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+		</th>
+		</tr>
+		</table>
+	</div>
+	<div class="content-box">
+		<iframe src="https://en.m.wikipedia.org/wiki/Nilgai" style="width:100%; height:1200px;border:solid;border-width:1px">
+	</div>
+</div>
+<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script>
+
+	var ha = ($('#videobox').offset().top + $('#videobox').height());
+	$(window).scroll(function(){
+		if($(window).scrollTop() > ha + 200){
+			$('#videobox').css('bottom', '0');
+		} else if($(window).scrollTop() < ha + 100){
+			$('#videobox').removeClass('out').addClass('in');
+		} else{
+			$('#videobox').removeClass('in').addClass('out');
+			$('#videobox').css('bottom', '-500px');
+		}
+	});
+
+</script>
+ <script>
+  document.getElementById("link_id").addEventListener("click", function () {
+    document.getElementById("linkAudio").play();
+  });
+</script>
+</body>
+</html>

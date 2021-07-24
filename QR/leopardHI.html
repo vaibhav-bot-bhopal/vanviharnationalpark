@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/new.css">
+</head>
+
+<body>
+<div class="content-main-box">
+<center>
+<img src="images/logo.png">
+</center>
+	<div id="videobox">
+		<video width="200" controls="">
+			<source src="videos/leopard.mp4" type="video/mp4">
+		</video>
+		<br>
+		<table border=0>
+		<tr style="background: #ccffff;"><th width=60%><a href="leopard.html">English</a></th>
+		<th>
+		<audio controls id="linkAudio">
+			<source src="videos/leopard.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+		</th>
+		</tr>
+		</table>
+	</div>
+	<div class="content-box">
+		<iframe src="https://hi.m.wikipedia.org/wiki/%E0%A4%A4%E0%A5%87%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%81%E0%A4%86" style="width:100%; height:1200px;border:solid;border-width:1px">
+	</div>
+</div>
+<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script>
+
+	var ha = ($('#videobox').offset().top + $('#videobox').height());
+	$(window).scroll(function(){
+		if($(window).scrollTop() > ha + 200){
+			$('#videobox').css('bottom', '0');
+		} else if($(window).scrollTop() < ha + 100){
+			$('#videobox').removeClass('out').addClass('in');
+		} else{
+			$('#videobox').removeClass('in').addClass('out');
+			$('#videobox').css('bottom', '-500px');
+		}
+	});
+
+</script>
+ 
+</body>
+</html>
